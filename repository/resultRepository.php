@@ -8,5 +8,5 @@ function getResult(){
     
     $query->execute();
     
-    return $query->fetch();
+    return $query->fetchAll();
 }

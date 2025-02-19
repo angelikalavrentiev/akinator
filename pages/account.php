@@ -1,9 +1,11 @@
 <?php
+
+session_start();
+
 include "../config/database.php";
 include "../repository/userRepository.php";
 include "../repository/gamelogRepository.php";
 
-session_start();
 
 if (!isset($_SESSION['user'])) {
     header("Location: index.php");
