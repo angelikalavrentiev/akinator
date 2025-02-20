@@ -1,18 +1,23 @@
+<div class="account">
 <h2><?= htmlspecialchars($_SESSION['user']) ?? "Utilisateur inconnu" ?></h2>
 
-<div>
+<div class="info">
     <h2>Historique des parties</h2>
+    <div class="historique">
     <?php if (!empty($gamelogs)): ?>
-    <?php foreach ($gamelogs as $gamelog): ?>
+    <?php foreach (array_slice($gamelogs, 0, 5) as $gamelog): ?>
+    <div class="gamelog">
     <p><?= htmlspecialchars($gamelog["date"]) ?></p>
     <p><?= htmlspecialchars($gamelog["name"]) ?></p>
+    </div>
     <?php endforeach ?>
 <?php else: ?>
     <p>Aucun historique de partie trouvé.</p>
 <?php endif; ?>
+    </div>
     <h2>Changer mon mot de passe</h2>
     <p>Votre mot de passe doit contenir 8 et 16 caractères, avec une majuscule et minuscule, 1 chiffre et 1 caractère spécial.</p>
-    <form method="POST">
+    <form method="POST" class="changemdp">
         <label for="thenpassword">Mot de passe actuel</label>
         <input type="password" id="thenpassword" name="thenpassword"/>
         <label for="newpassword">Nouveau mot de passe</label>
@@ -21,6 +26,7 @@
     </form>
     <h2>Supprimer mon compte</h2>
     <form method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')">
-        <button type="submit" name="delete_account">Supprimer mon compte</button>
+        <button type="submit" name="delete_account" class="suppr">Supprimer mon compte</button>
     </form>
+</div>
 </div>

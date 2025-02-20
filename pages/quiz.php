@@ -15,7 +15,7 @@ if (!isset($_SESSION['user'])) {
 
 if(!empty($_POST)){
     $choix = $_POST["response"];
-    var_dump($choix);
+    //var_dump($choix);
     $answer = getAnswerById($choix);
     //var_dump($answer);
     if(isset($answer["id_result"])){

@@ -1,31 +1,262 @@
-body{
+body {
     margin: 0;
 }
-header{
+
+// header
+header {
     display: flex;
     justify-content: space-between;
     background-color: #810000;
     padding: 1em;
-    nav{
+    nav {
         display: flex;
-        a{
-        text-decoration: none;
-        color: white;
+        a {
+            text-decoration: none;
+            color: white;
+        }
     }
-    }
-    a{
+    a {
         text-decoration: none;
         color: white;
         padding: 0.5em;
     }
-    form{
+    form {
         display: flex;
         align-items: center;
-        button{
+        button {
             border: none;
             outline: none;
             background: none;
             color: white;
         }
+    }
+}
+
+//index
+.index {
+    text-align: center;
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    img {
+        width: 50%;
+    }
+    .button-container {
+        button {
+            background-color: #810000;
+            border: none;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+//signin / register
+.signup {
+    text-align: center;
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    .container {
+        form {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10em;
+            margin-right: 10em;
+            padding: 2em;
+            input {
+                margin: 0.5em;
+            }
+            button {
+                background-color: #810000;
+                border: none;
+                border-radius: 0.5em;
+                padding: 0.5em;
+                color: white;
+            }
+        }
+    }
+}
+
+.signin {
+    text-align: center;
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    .container {
+        form {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10em;
+            margin-right: 10em;
+            padding: 2em;
+            input {
+                margin: 0.5em;
+            }
+            button {
+                background-color: #810000;
+                border: none;
+                border-radius: 0.5em;
+                padding: 0.5em;
+                color: white;
+            }
+        }
+    }
+}
+
+//account
+.account {
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        font-size: xx-large;
+    }
+    .info {
+        text-align: center;
+        background-color: white;
+        margin-left: 3em;
+        margin-right: 3em;
+        padding: 2em;
+        .historique {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            margin: 0;
+            .gamelog {
+                display: flex;
+                justify-content: space-around;
+                border-bottom: 1px solid #ddd;
+                p {
+                    padding-left: 2em;
+                    padding-right: 2em;
+                }
+            }
+        }
+        .changemdp {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1em;
+            input {
+                margin: 0.5em;
+            }
+            button {
+                background-color: #810000;
+                border: none;
+                border-radius: 0.5em;
+                padding: 0.5em;
+                color: white;
+                margin: 0.5em;
+            }
+        }
+        .suppr {
+            background-color: #810000;
+            border: none;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            color: white;
+            margin: 0.5em;
+        }
+    }
+}
+
+//quiz
+.quiz {
+    text-align: center;
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    h1 {
+        margin: 0;
+        padding-bottom: 1em;
+    }
+    .questions {
+        background-color: white;
+        margin-left: 3em;
+        margin-right: 3em;
+        padding: 1em;
+        p {
+            text-align: center;
+            font-size: x-large;
+        }
+        form {
+            button {
+                background-color: #810000;
+                border: none;
+                border-radius: 0.5em;
+                padding: 1em;
+                color: white;
+                margin: 1em;
+                margin-top: 0;
+            }
+        }
+        button {
+            background-color: #810000;
+            border: none;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            color: white;
+            margin: 1em;
+            margin-top: 1em;
+        }
+    }
+}
+//result
+.result{
+    text-align: center;
+    background-color: #fbefe9;
+    padding-bottom: 2em;
+    padding-top: 2em;
+    h1 {
+        margin: 0;
+        padding-bottom: 1em;
+    }
+    .guess{
+        background-color: white;
+        margin-left: 3em;
+        margin-right: 3em;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 100%;
+        }
+        .a{
+            margin: 1em;
+            a{
+            background-color: #810000;
+            border: none;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            color: white;
+            margin: 1em;
+            margin-top: 1em; 
+            text-decoration: none;
+            }
+        }
+    }
+}
+
+
+//footer
+footer {
+    background-color: #810000;
+    text-align: center;
+    color: white;
+    padding: 0.5em;
+    p {
+        margin: 0;
     }
 }

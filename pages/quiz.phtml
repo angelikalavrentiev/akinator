@@ -1,9 +1,11 @@
+<div class="quiz">
 <h1>Quiz</h1>
-<div>
+<div class="questions">
 <p><?= htmlspecialchars($questions["name"]) ?></p>
 <form method="POST">
         <button type="radio" name="response" value="<?= $possibleanswer[1]["id"] ?>">Oui</button>
         <button type="radio" name="response" value="<?= $possibleanswer[0]["id"] ?>">Non</button>
 </form>
 <button onclick="window.location.href = window.location.pathname">Recommencer le quiz</button>
+</div>
 </div>

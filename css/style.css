@@ -31,4 +31,219 @@ header form button {
   color: white;
 }
 
+.index {
+  text-align: center;
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+}
+.index img {
+  width: 50%;
+}
+.index .button-container button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+.index .button-container button a {
+  text-decoration: none;
+  color: white;
+}
+
+.signup {
+  text-align: center;
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.signup .container form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 2em;
+}
+.signup .container form input {
+  margin: 0.5em;
+}
+.signup .container form button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+}
+
+.signin {
+  text-align: center;
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.signin .container form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 2em;
+}
+.signin .container form input {
+  margin: 0.5em;
+}
+.signin .container form button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+}
+
+.account {
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+}
+.account h2 {
+  text-align: center;
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: xx-large;
+}
+.account .info {
+  text-align: center;
+  background-color: white;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: 2em;
+}
+.account .info .historique {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+}
+.account .info .historique .gamelog {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+}
+.account .info .historique .gamelog p {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.account .info .changemdp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+.account .info .changemdp input {
+  margin: 0.5em;
+}
+.account .info .changemdp button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+  margin: 0.5em;
+}
+.account .info .suppr {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+  margin: 0.5em;
+}
+
+.quiz {
+  text-align: center;
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.quiz h1 {
+  margin: 0;
+  padding-bottom: 1em;
+}
+.quiz .questions {
+  background-color: white;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: 1em;
+}
+.quiz .questions p {
+  text-align: center;
+  font-size: x-large;
+}
+.quiz .questions form button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 1em;
+  color: white;
+  margin: 1em;
+  margin-top: 0;
+}
+.quiz .questions button {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+  margin: 1em;
+  margin-top: 1em;
+}
+
+.result {
+  text-align: center;
+  background-color: #fbefe9;
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.result h1 {
+  margin: 0;
+  padding-bottom: 1em;
+}
+.result .guess {
+  background-color: white;
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.result .guess img {
+  width: 100%;
+}
+.result .guess .a {
+  margin: 1em;
+}
+.result .guess .a a {
+  background-color: #810000;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  color: white;
+  margin: 1em;
+  margin-top: 1em;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #810000;
+  text-align: center;
+  color: white;
+  padding: 0.5em;
+}
+footer p {
+  margin: 0;
+}
+
 /*# sourceMappingURL=style.css.map */
