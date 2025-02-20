@@ -1,6 +1,6 @@
 <?php
 
-function getResultById($id){
+function getResultById($id): array|false{
     
     $pdo = getConnexion();
     

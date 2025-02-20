@@ -1,6 +1,6 @@
 <?php
 
-function saveGameLog($id_user, $id_result) {
+function saveGameLog($id_user, $id_result): void {
     
     $pdo = getConnexion();
     
@@ -9,7 +9,7 @@ function saveGameLog($id_user, $id_result) {
     $query->execute([$id_user, $id_result]);
 }
 
-function getGamelogByUserId($id_user){
+function getGamelogByUserId($id_user): array{
     
     $pdo = getConnexion();
     

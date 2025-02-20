@@ -1,6 +1,6 @@
 <?php
 
-function getPossibleAnswer($id_questions){
+function getPossibleAnswer($id_questions): array{
     
     $pdo = getConnexion();
     
@@ -11,7 +11,7 @@ function getPossibleAnswer($id_questions){
     return $query->fetchAll();
 }
 
-function getAnswerById($id){
+function getAnswerById($id): ?array{
     
     $pdo = getConnexion();
     
@@ -22,7 +22,7 @@ function getAnswerById($id){
     return $query->fetch();
 }
 
-function getAnswerByResult($id_result){
+function getAnswerByResult($id_result): array{
     
     $pdo = getConnexion();
     

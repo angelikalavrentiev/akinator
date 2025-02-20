@@ -1,6 +1,6 @@
 <?php
 
-function getFirstQuestions($order_of_question){
+function getFirstQuestions($order_of_question): array|false{
     
     $pdo = getConnexion();
     
@@ -11,7 +11,7 @@ function getFirstQuestions($order_of_question){
     return $query->fetch();
 }
 
-function getQuestionsById($id_questions){
+function getQuestionsById($id_questions): array|false{
     
     $pdo = getConnexion();
     

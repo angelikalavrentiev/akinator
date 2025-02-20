@@ -1,6 +1,6 @@
 <?php
 
-function createUser(string $email, string $username, string $password){
+function createUser(string $email, string $username, string $password): void{
     
     $pdo = getConnexion();
     
@@ -9,7 +9,7 @@ function createUser(string $email, string $username, string $password){
     $query->execute([$email, $username, $password]);
 }
 
-function getUserByUsername(string $username){
+function getUserByUsername(string $username): array|false{
     
     $pdo = getConnexion();
     
@@ -20,7 +20,7 @@ function getUserByUsername(string $username){
     return $query->fetch();
 }
 
-function getUserById($userId){
+function getUserById($userId): array|false{
     
     $pdo = getConnexion();
     
@@ -31,7 +31,7 @@ function getUserById($userId){
     return $query->fetch();
 }
 
-function getPasswordByUserId($userId){
+function getPasswordByUserId($userId): array|false{
     
     $pdo = getConnexion();
     
@@ -42,7 +42,7 @@ function getPasswordByUserId($userId){
     return $query->fetch();
 }
 
-function updatePassword($userId, $passwordHash){
+function updatePassword($userId, $passwordHash): bool{
     
     $pdo = getConnexion();
     
@@ -62,7 +62,7 @@ function deleteUser(int $userId): bool {
     return $query->execute([$userId]);
 }
 
-function emailExists($email) {
+function emailExists($email): bool {
     $pdo = getConnexion();
     $query = $pdo->prepare("SELECT * FROM user WHERE email = ?");
     $query->execute([$email]);
