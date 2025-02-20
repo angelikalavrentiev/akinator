@@ -8,21 +8,24 @@ include "../repository/answerRepository.php";
 include "../repository/resultRepository.php";
 include "../repository/questionsRepository.php";
 
+// sécurité
 if (!isset($_SESSION['user'])) {
     header("Location: index.php");
     exit;
 }
 
+// affichage du quiz
 if(!empty($_POST)){
+    //recupérer la réponse de l'utilisateur
     $choix = $_POST["response"];
     //var_dump($choix);
     $answer = getAnswerById($choix);
     //var_dump($answer);
-    if(isset($answer["id_result"])){
+    if(isset($answer["id_result"])){ // si la réponse abboutit à un résultat - redirection
        $_SESSION['id_result'] = $answer["id_result"];
        header ("Location: result.php");
     }
-    else{
+    else{ // sinon passe à la prochaine question
         $id_questions = $answer["id_next_question"];
         $possibleanswer = getPossibleAnswer($id_questions);
         $questions = getQuestionsById($id_questions);
@@ -30,7 +33,7 @@ if(!empty($_POST)){
         //var_dump($questions);
     }
 }
-else{
+else{ // affiche la première question
     $questions = getFirstQuestions(1);
     $possibleanswer = getPossibleAnswer($questions["id"]);
     //var_dump($questions["id"]);

@@ -4,6 +4,7 @@ include "../repository/userRepository.php";
 
 session_start();
 
+// connexion d'utilisateur existant
 if(!empty($_POST)){
     
     $user = getUserByUsername($_POST["username"]);
@@ -11,10 +12,8 @@ if(!empty($_POST)){
     if($user){
         if(password_verify($_POST['password'], $user["password"])){
             
-            //création d'une session
             $_SESSION["user"] = $user["username"];
             
-            //redirection vers la page top secrète
             header("Location: account.php");
             exit;
         }

@@ -4,6 +4,7 @@ include "../repository/userRepository.php";
 
 session_start();
 
+// enregistrer un nouvel utilisateur
 if(!empty($_POST)){
         $email = $_POST["email"];
         $username = $_POST["username"];
@@ -12,9 +13,10 @@ if(!empty($_POST)){
     try {
         if(preg_match($regex, $password)){
             
+            // vérifie les emails pour qu'ils soit uniques
             if (emailExists($email)) {
-            throw new Exception("Cet email est déjà utilisé. Veuillez en choisir un autre.");
-        }
+                throw new Exception("Cet email est déjà utilisé. Veuillez en choisir un autre.");
+            }
 
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -30,7 +32,7 @@ if(!empty($_POST)){
         else {
             throw new Exception('Les points ("."), slash ("/") ne sont pas toléré');
         }
-    } 
+    } // erreur si le regex n'est pas validé
     catch (Exception $e) {
        $error_message = $e->getMessage();
     }
