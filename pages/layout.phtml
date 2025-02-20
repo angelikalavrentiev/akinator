@@ -15,7 +15,14 @@
     <header>
         <a href="index.php">Accueil</a>
         <nav>
-            <a href="signin.php">Connexion</a>
+            <?php if (isset($_SESSION['user'])): ?>
+            <a href="account.php" class="button">Compte</a>
+           <form method="POST" action="logout.php">
+             <button type="submit" name="logout" class="button">Déconnexion</button>
+           </form>
+        <?php else: ?>
+            <a href="signin.php" class="button">Connectez-vous</a>
+        <?php endif; ?>
             <a href="register.php">Inscription</a>
         </nav>
     </header>

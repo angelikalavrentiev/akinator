@@ -20,6 +20,17 @@ function getUserByUsername(string $username){
     return $query->fetch();
 }
 
+function getUserById($userId){
+    
+    $pdo = getConnexion();
+    
+    $query = $pdo -> prepare("SELECT * FROM user WHERE id = ?");
+    
+    $query->execute([$userId]);
+    
+    return $query->fetch();
+}
+
 function getPasswordByUserId($userId){
     
     $pdo = getConnexion();
@@ -38,4 +49,22 @@ function updatePassword($userId, $passwordHash){
     $query = $pdo->prepare("UPDATE user SET password = ? WHERE id = ?");
     
     return $query->execute([$passwordHash, $userId]);
+}
+function deleteUser(int $userId): bool {
+    $pdo = getConnexion();
+    
+    $query = $pdo->prepare("DELETE FROM game_log WHERE id_user = ?");
+    
+    $query->execute([$userId]);
+    
+    $query = $pdo->prepare("DELETE FROM user WHERE id = ?");
+    
+    return $query->execute([$userId]);
+}
+
+function emailExists($email) {
+    $pdo = getConnexion();
+    $query = $pdo->prepare("SELECT * FROM user WHERE email = ?");
+    $query->execute([$email]);
+    return $query->fetch(); 
 }

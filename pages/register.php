@@ -5,10 +5,16 @@ include "../repository/userRepository.php";
 session_start();
 
 if(!empty($_POST)){
+        $email = $_POST["email"];
+        $username = $_POST["username"];
         $password = $_POST["password"];
         $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,16}$/";
     try {
         if(preg_match($regex, $password)){
+            
+            if (emailExists($email)) {
+            throw new Exception("Cet email est déjà utilisé. Veuillez en choisir un autre.");
+        }
 
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 

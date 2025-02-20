@@ -1,2 +1,4 @@
 <h1>Résultat</h1>
-<p>Je parie que tu pensais à...</p>
+<p>Je parie que tu pensais à... <?= htmlspecialchars($result['name']) ?></p>
+<img src="<?= $result['image'] ?>" alt="<?= htmlspecialchars($result['name']) ?>">
+<p><?= htmlspecialchars($result['description']) ?></p>

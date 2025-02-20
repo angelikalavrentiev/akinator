@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #810000;
+  padding: 1em;
+}
+header nav {
+  display: flex;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+}
+header form {
+  display: flex;
+  align-items: center;
+}
+header form button {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
